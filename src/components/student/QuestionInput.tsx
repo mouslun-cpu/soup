@@ -56,7 +56,7 @@ export function QuestionInput({ onSubmit, disabled }: QuestionInputProps) {
           value={value}
           onChange={(e) => setValue(e.target.value)}
           onKeyDown={handleKeyDown}
-          placeholder="這個人是否在戶外？&#10;這件事發生在晚上嗎？"
+          placeholder="這個人是否在戶外？&#10;這件事發生在晚上嗎？&#10;有人死掉嗎？"
           maxLength={100}
           rows={2}
           disabled={loading || disabled}
