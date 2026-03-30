@@ -32,6 +32,13 @@ const DEMO_STORIES = [
     true_need:
       "產房接生：裸體大哭的是女嬰、半裸笑的是媽媽、大哭的是爸爸、另外一男兩女是醫師護理師。",
   },
+  {
+    title: "哥哥懷孕了",
+    content:
+      "哥哥懷孕了，懷的是媽媽，發生甚麼事?",
+    true_need:
+      "哥哥很胖肚子很大，妹妹問他是懷孕嗎? 哥哥大怒回她: 懷妳媽啦!",
+  },
 ];
 
 export default function TeacherSetupPage() {
