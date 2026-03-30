@@ -1,0 +1,108 @@
+/* Google Fonts - JetBrains Mono */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #0a0e1a;
+    --surface: #111827;
+    --card: #1a2235;
+    --border: #1e3a5f;
+    --accent: #00d4ff;
+    --glow: #0ea5e9;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body {
+    background-color: var(--bg);
+    color: #e2e8f0;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* 防止移動端點擊高亮 */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* 自定義滾動條 */
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0a0e1a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1e3a5f;
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00d4ff;
+  }
+}
+
+@layer components {
+  /* 科技感卡片 */
+  .cyber-card {
+    @apply bg-[#1a2235] border border-[#1e3a5f] rounded-xl;
+    background: linear-gradient(135deg, #1a2235 0%, #111827 100%);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255,255,255,0.05);
+  }
+
+  /* 發光邊框效果 */
+  .glow-border {
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.1), inset 0 0 15px rgba(0, 212, 255, 0.05);
+  }
+
+  /* 按鈕基礎 */
+  .btn-cyber {
+    @apply relative overflow-hidden font-semibold rounded-lg px-4 py-2 transition-all duration-200;
+    @apply active:scale-95;
+  }
+
+  /* 科技網格背景 */
+  .cyber-grid-bg {
+    background-image:
+      linear-gradient(rgba(0,212,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,212,255,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  /* 狀態標籤 */
+  .status-yes {
+    @apply bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs px-2 py-0.5 rounded-full font-mono;
+  }
+  .status-no {
+    @apply bg-red-500/20 text-red-400 border border-red-500/30 text-xs px-2 py-0.5 rounded-full font-mono;
+  }
+  .status-irrelevant {
+    @apply bg-gray-500/20 text-gray-400 border border-gray-500/30 text-xs px-2 py-0.5 rounded-full font-mono;
+  }
+  .status-pending {
+    @apply bg-amber-500/20 text-amber-400 border border-amber-500/30 text-xs px-2 py-0.5 rounded-full font-mono;
+  }
+}
+
+@layer utilities {
+  /* 文字發光 */
+  .text-glow {
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
+  }
+  .text-glow-green {
+    text-shadow: 0 0 20px rgba(16, 185, 129, 0.8);
+  }
+  .text-glow-red {
+    text-shadow: 0 0 20px rgba(239, 68, 68, 0.8);
+  }
+}
